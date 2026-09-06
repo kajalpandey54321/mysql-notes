@@ -1676,3 +1676,254 @@ ADD Email VARCHAR(100);
 ---
 
 
+
+
+# 💻 **DBMS vs RDBMS**
+
+---
+
+## 📌 **1. DBMS Kya Hai?**
+
+**DBMS** ka full form hai:
+
+> **Database Management System**
+
+DBMS ek software hai jo database mein stored data ko **create, store, manage, update aur retrieve** karne mein help karta hai.
+
+### 🧠 **Simple Hinglish**
+
+DBMS ek system hai jo data ko manage karta hai.
+
+### 📌 Examples
+
+- File-based DBMS
+- Microsoft Access
+- Some database management systems that do not require relational table relationships
+
+---
+
+# 📌 **2. RDBMS Kya Hai?**
+
+**RDBMS** ka full form hai:
+
+> **Relational Database Management System**
+
+RDBMS ek type ka DBMS hai jo data ko **tables (rows and columns)** mein store karta hai aur different tables ke beech **relationships** create kar sakta hai.
+
+### 📌 Examples
+
+- MySQL
+- Oracle Database
+- Microsoft SQL Server
+- PostgreSQL
+
+---
+
+# 🆚 **3. DBMS vs RDBMS**
+
+| 📌 Feature | DBMS | RDBMS |
+|---|---|---|
+| Full Form | Database Management System | Relational Database Management System |
+| Data Storage | Different structures/methods | Tables |
+| Rows & Columns | May be used | Mainly used |
+| Relationship | Usually limited/not required | Tables ke beech relationships |
+| Primary Key | May not be required | Commonly used |
+| Foreign Key | Generally not a core requirement | Used to create relationships |
+| Data Integrity | Comparatively lower | Higher |
+| Normalization | Not necessarily required | Commonly used |
+| Multiple Tables | Possible | Commonly used |
+| SQL | May or may not be central | Commonly uses SQL |
+| Example | File-based systems, MS Access | MySQL, Oracle, PostgreSQL |
+
+---
+
+# 🗃️ **4. Data Storage**
+
+### 🔹 DBMS
+
+DBMS mein data ko manage karne ka method system ke type par depend karta hai.
+
+### 🔹 RDBMS
+
+RDBMS mein data ko **related tables** mein organize kiya jata hai.
+
+### 📌 Example
+
+**Student Table**
+
+| Roll_No | Name | Course_ID |
+|---:|---|---:|
+| 101 | Kajal | 1 |
+| 102 | Rahul | 2 |
+
+**Course Table**
+
+| Course_ID | Course_Name |
+|---:|---|
+| 1 | CSE |
+| 2 | IT |
+
+Yahan dono tables `Course_ID` ke through related hain.
+
+---
+
+# 🔗 **5. Relationship Between Tables**
+
+RDBMS ki important feature hai **relationship between tables**.
+
+```text
+       STUDENT TABLE
+             │
+             │ Course_ID
+             ↓
+       COURSE TABLE
+```
+
+### 📌 Example
+
+```sql
+CREATE TABLE Course (
+    Course_ID INT PRIMARY KEY,
+    Course_Name VARCHAR(50)
+);
+```
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Course_ID INT,
+    FOREIGN KEY (Course_ID)
+    REFERENCES Course(Course_ID)
+);
+```
+
+### 🧠 **Explanation**
+
+- `Course_ID` → Course table ki Primary Key
+- `Course_ID` → Student table mein Foreign Key
+- Dono tables ke beech relationship create hota hai.
+
+---
+
+# 🔑 **6. Primary Key**
+
+Primary Key ka use table ke records ko **uniquely identify** karne ke liye hota hai.
+
+### 📌 Example
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50)
+);
+```
+
+Yahan `Roll_No` Primary Key hai.
+
+### ⭐ Properties
+
+- Unique hoti hai
+- Duplicate values allowed nahi hoti
+- `NULL` value allowed nahi hoti
+
+---
+
+# 🔗 **7. Foreign Key**
+
+Foreign Key ek table ke column ko doosri table ki Primary Key se connect karti hai.
+
+### 📌 Example
+
+```sql
+FOREIGN KEY (Course_ID)
+REFERENCES Course(Course_ID);
+```
+
+> 💡 **Easy Way:**  
+> **Primary Key → Identify**  
+> **Foreign Key → Connect**
+
+---
+
+# 📊 **8. DBMS vs RDBMS Example**
+
+### 🔹 DBMS
+
+```text
+Student Data
+     ↓
+   DBMS
+     ↓
+Data Management
+```
+
+### 🔹 RDBMS
+
+```text
+Student Table
+      │
+      │ Relationship
+      ↓
+Course Table
+      │
+      ↓
+Teacher Table
+```
+
+RDBMS related data ko multiple tables mein organize kar sakta hai.
+
+---
+
+# 🧑‍💻 **9. SQL in RDBMS**
+
+RDBMS mein SQL ka use data ko manage karne ke liye commonly kiya jata hai.
+
+### 📌 Create Table
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);
+```
+
+### 📌 Insert Data
+
+```sql
+INSERT INTO Student
+(Roll_No, Name, Age)
+VALUES
+(101, 'Kajal', 18);
+```
+
+### 📌 Retrieve Data
+
+```sql
+SELECT * FROM Student;
+```
+
+### 📌 Update Data
+
+```sql
+UPDATE Student
+SET Age = 19
+WHERE Roll_No = 101;
+```
+
+### 📌 Delete Data
+
+```sql
+DELETE FROM Student
+WHERE Roll_No = 101;
+```
+
+---
+
+# 🧩 **10. Normalization**
+
+RDBMS mein **Normalization** ka use data ko properly organize karne aur unnecessary duplication ko reduce karne ke liye kiya jata hai.
+
+
+
