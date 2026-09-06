@@ -1,15 +1,1 @@
-MYSQL NOTES
 
-1. What is MySQL?
-
-MySQL is an open-source Relational Database Management System (RDBMS).
-
-2. What is Database?
-
-A database is an organized collection of data.
-
-3. What is SQL?
-
-SQL stands for Structured Query Language.
-
-SQL is used to create, store, retrieve, update and delete data in a database.
