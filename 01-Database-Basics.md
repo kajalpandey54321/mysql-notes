@@ -1152,3 +1152,548 @@ DROP TABLE → Table Delete
 Primary Key → Unique Identification
 
 
+
+# 📊 **ROW AND COLUMN**
+
+---
+
+## 📌 **1. Row and Column Kya Hote Hain?**
+
+Database Table mein data ko properly organize karne ke liye **Rows** aur **Columns** ka use hota hai.
+
+### 🧠 **Simple Hinglish**
+
+- **Row** → Ek complete record/information ko represent karti hai.
+- **Column** → Ek particular type ki information ko represent karta hai.
+
+### 📌 **Example**
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+| 102 | Rahul | 19 | IT |
+| 103 | Priya | 18 | CSE |
+
+Is table mein:
+
+- `Roll_No`, `Name`, `Age`, `Course` → **Columns**
+- `101, Kajal, 18, CSE` → **First Row**
+- `102, Rahul, 19, IT` → **Second Row**
+- `103, Priya, 18, CSE` → **Third Row**
+
+---
+
+# 🟦 **2. Row Kya Hai?**
+
+A **Row** database table mein ek **complete record** ko represent karti hai.
+
+Row ko **Record** bhi kaha jata hai.
+
+### 📌 **Example**
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+
+Yahan poori line:
+
+```text
+101 | Kajal | 18 | CSE
+```
+
+ek **Row/Record** hai.
+
+### 🧠 **Easy Way**
+
+> 💡 **Row = Complete Record**
+
+---
+
+# 🔹 **3. Row Ki Characteristics**
+
+Rows ki important characteristics:
+
+1. 📌 Row ek complete record ko represent karti hai.
+2. 📌 Ek table mein multiple rows ho sakti hain.
+3. 📌 Har row mein columns ke according values hoti hain.
+4. 📌 Har row kisi particular entity ki information store kar sakti hai.
+5. 📌 Primary Key ki help se rows ko uniquely identify kiya ja sakta hai.
+
+---
+
+# 🟩 **4. Column Kya Hai?**
+
+A **Column** database table mein ek particular type ki information ko represent karta hai.
+
+Column ko **Field** bhi kaha jata hai.
+
+### 📌 **Example**
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+| 102 | Rahul | 19 | IT |
+| 103 | Priya | 18 | CSE |
+
+Yahan:
+
+```text
+Roll_No
+Name
+Age
+Course
+```
+
+sabhi **Columns** hain.
+
+### 🧠 **Easy Way**
+
+> 💡 **Column = Particular Type of Information**
+
+---
+
+# 🔹 **5. Column Ki Characteristics**
+
+Columns ki important characteristics:
+
+1. 📌 Har column ka ek unique name hona chahiye.
+2. 📌 Har column kisi particular type ka data store karta hai.
+3. 📌 Har column ka ek data type hota hai.
+4. 📌 Column mein multiple rows ki values hoti hain.
+5. 📌 Column par constraints apply kiye ja sakte hain.
+
+---
+
+# 📊 **6. Row vs Column**
+
+| Feature | Row | Column |
+|---|---|---|
+| Meaning | Complete record | Particular field |
+| Also called | Record | Field |
+| Direction | Horizontal | Vertical |
+| Contains | Different columns ki values | Same type ki values |
+| Example | `101, Kajal, 18, CSE` | `Name` |
+| Purpose | Ek complete entity ka data | Particular information store karna |
+
+---
+
+# ↔️ **7. Horizontal and Vertical**
+
+Row aur Column ko direction se easily identify kar sakte hain.
+
+```text
+              COLUMNS
+        ↓        ↓       ↓       ↓
+     Roll_No    Name     Age    Course
+        │         │       │       │
+        ├──────────────────────────→ ROW
+        │    101   Kajal   18    CSE
+        │
+        ├──────────────────────────→ ROW
+        │    102   Rahul   19    IT
+        │
+        └──────────────────────────→ ROW
+             103   Priya   18    CSE
+```
+
+### 🧠 **Remember**
+
+```text
+↔️ Horizontal = Row
+↕️ Vertical   = Column
+```
+
+---
+
+# 🔢 **8. Number of Rows and Columns**
+
+Example:
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+| 102 | Rahul | 19 | IT |
+| 103 | Priya | 18 | CSE |
+
+Is table mein:
+
+- **Rows = 3**
+- **Columns = 4**
+
+> 💡 Header ko data row count mein normally include nahi kiya jata.
+
+---
+
+# 🧑‍💻 **9. SQL Mein Row Add Karna**
+
+New row add karne ke liye `INSERT INTO` command use hoti hai.
+
+### 📌 **Query**
+
+```sql
+INSERT INTO Student
+(Roll_No, Name, Age, Course)
+VALUES
+(104, 'Aman', 19, 'CSE');
+```
+
+### 🧠 **Explanation**
+
+Is query se `Student` table mein ek **new row/record** add hoga.
+
+---
+
+# 🔍 **10. Specific Row Dekhna**
+
+Kisi particular record ko dekhne ke liye `SELECT` ke saath `WHERE` use kar sakte hain.
+
+### 📌 **Query**
+
+```sql
+SELECT * FROM Student
+WHERE Roll_No = 101;
+```
+
+### 📊 **Expected Output**
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+
+---
+
+# ✏️ **11. Row Update Karna**
+
+Kisi row ke data ko change karne ke liye `UPDATE` command use hoti hai.
+
+### 📌 **Example**
+
+```sql
+UPDATE Student
+SET Age = 19
+WHERE Roll_No = 101;
+```
+
+Isse Roll_No `101` wale student ki age update ho jayegi.
+
+---
+
+# ❌ **12. Row Delete Karna**
+
+Kisi particular row ko delete karne ke liye `DELETE` command use hoti hai.
+
+### 📌 **Query**
+
+```sql
+DELETE FROM Student
+WHERE Roll_No = 104;
+```
+
+Isse Roll_No `104` wali row delete ho jayegi.
+
+> ⚠️ **Important:** `WHERE` condition carefully use karein, warna unwanted rows delete ho sakti hain.
+
+---
+
+# 🧑‍💻 **13. Column Add Karna**
+
+Existing table mein new column add karne ke liye `ALTER TABLE` command use hoti hai.
+
+### 📌 **Example**
+
+Student table mein `Email` column add karna:
+
+```sql
+ALTER TABLE Student
+ADD Email VARCHAR(100);
+```
+
+### 🧠 **Explanation**
+
+- `ALTER TABLE` → Existing table mein change karne ke liye
+- `ADD` → New column add karne ke liye
+- `Email` → New column ka name
+- `VARCHAR(100)` → Column ka data type
+
+---
+
+# ✏️ **14. Column Modify Karna**
+
+Column ka data type ya size change karne ke liye `ALTER TABLE` use kiya ja sakta hai.
+
+### 📌 **Example**
+
+```sql
+ALTER TABLE Student
+MODIFY Name VARCHAR(100);
+```
+
+Isse `Name` column ki maximum length `100` characters kar di jayegi.
+
+---
+
+# ❌ **15. Column Delete Karna**
+
+Table se kisi column ko remove karne ke liye `DROP COLUMN` use hota hai.
+
+### 📌 **Query**
+
+```sql
+ALTER TABLE Student
+DROP COLUMN Email;
+```
+
+Isse `Email` column table se remove ho jayega.
+
+> ⚠️ **Note:** Column drop karne se us column ka stored data bhi remove ho sakta hai.
+
+---
+
+# 📋 **16. Table Ke Columns Dekhna**
+
+MySQL mein table ke columns aur unki details dekhne ke liye:
+
+### 📌 **Query**
+
+```sql
+DESCRIBE Student;
+```
+
+Ya:
+
+```sql
+DESC Student;
+```
+
+### 🧠 **Isse kya pata chalega?**
+
+- Column Name
+- Data Type
+- NULL allowed hai ya nahi
+- Key
+- Default value
+- Extra information
+
+---
+
+# 📊 **17. Rows Ki Count Karna**
+
+Table mein total kitni rows hain, ye check karne ke liye `COUNT()` function use karte hain.
+
+### 📌 **Query**
+
+```sql
+SELECT COUNT(*) FROM Student;
+```
+
+### 📊 **Example Output**
+
+```text
+4
+```
+
+Agar table mein 4 student records hain, to result `4` aayega.
+
+---
+
+# 🔢 **18. Columns Ki Count Kaise Samjhein?**
+
+Table ke columns ki information dekhne ke liye:
+
+```sql
+DESCRIBE Student;
+```
+
+Is command ke output mein table ke saare columns show honge.
+
+---
+
+# 🏫 **19. Real-Life Example**
+
+Student Management System mein ek table ho sakti hai:
+
+| Roll_No | Name | Age | Course | City |
+|---:|---|---:|---|---|
+| 101 | Kajal | 18 | CSE | Jaunpur |
+| 102 | Rahul | 19 | IT | Delhi |
+| 103 | Priya | 18 | CSE | Lucknow |
+
+### 📌 Rows
+
+```text
+Row 1 → 101 | Kajal | 18 | CSE | Jaunpur
+Row 2 → 102 | Rahul | 19 | IT  | Delhi
+Row 3 → 103 | Priya | 18 | CSE | Lucknow
+```
+
+### 📌 Columns
+
+```text
+Roll_No
+Name
+Age
+Course
+City
+```
+
+---
+
+# ⭐ **20. Row and Column Ka Importance**
+
+### 📌 Rows ka importance
+
+- Complete records store karti hain.
+- Individual records ko identify karne mein help karti hain.
+- Data ko retrieve, update aur delete karna easy hota hai.
+
+### 📌 Columns ka importance
+
+- Data ko categories mein divide karta hai.
+- Data ka type define karta hai.
+- Specific information ko search aur manage karna easy banata hai.
+
+---
+
+# 🧠 **21. Easy Way to Remember**
+
+```text
+📊 TABLE
+   │
+   ├── ↔️ ROW
+   │      ↓
+   │    Record
+   │
+   └── ↕️ COLUMN
+          ↓
+        Field
+```
+
+### ⭐ **One-Line Trick**
+
+> 💡 **Row = Record**  
+> 💡 **Column = Field**
+
+---
+
+# ✍️ **22. Exam Point of View**
+
+### ❓ Q1. What is a Row?
+
+**Answer:**
+
+A row is a complete record in a database table. It contains values for different columns related to one entity.
+
+---
+
+### ❓ Q2. What is a Column?
+
+**Answer:**
+
+A column is a field in a database table that represents a particular type of information.
+
+---
+
+### ❓ Q3. What is another name for Row?
+
+**Answer:**
+
+A Row is also called a **Record**.
+
+---
+
+### ❓ Q4. What is another name for Column?
+
+**Answer:**
+
+A Column is also called a **Field**.
+
+---
+
+### ❓ Q5. What is the difference between Row and Column?
+
+**Answer:**
+
+A row represents a complete record and is arranged horizontally, whereas a column represents a particular field and is arranged vertically.
+
+---
+
+### ❓ Q6. Which command is used to add a new row?
+
+**Answer:**
+
+The `INSERT INTO` command is used to add a new row to a table.
+
+Example:
+
+```sql
+INSERT INTO Student
+(Roll_No, Name, Age)
+VALUES
+(101, 'Kajal', 18);
+```
+
+---
+
+### ❓ Q7. Which command is used to add a new column?
+
+**Answer:**
+
+The `ALTER TABLE ... ADD` command is used to add a new column.
+
+Example:
+
+```sql
+ALTER TABLE Student
+ADD Email VARCHAR(100);
+```
+
+---
+
+# ⭐ **23. Important Questions**
+
+### 📌 **Short Questions**
+
+1. What is a Row?
+2. What is a Column?
+3. What is a Record?
+4. What is a Field?
+5. What is the difference between Row and Column?
+6. How can you add a new row in MySQL?
+7. How can you add a new column in MySQL?
+8. Which command is used to modify a column?
+9. Which command is used to delete a column?
+
+### 📌 **Long Questions**
+
+1. Explain Row and Column with a suitable example.
+2. Differentiate between Row and Column.
+3. Explain different operations performed on Rows and Columns.
+4. Explain how to add, modify and delete a column in MySQL.
+
+---
+
+# 🔄 **24. Quick Revision**
+
+| Term | Meaning |
+|---|---|
+| 📊 Table | Data ka organized structure |
+| ↔️ Row | Complete Record |
+| ↕️ Column | Particular Field |
+| 🔲 Cell | Single Value |
+| ➕ Insert | New Row Add |
+| ✏️ Update | Existing Data Change |
+| ❌ Delete | Row Remove |
+| ➕ Add Column | `ALTER TABLE ... ADD` |
+| ✏️ Modify Column | `ALTER TABLE ... MODIFY` |
+| ❌ Drop Column | `ALTER TABLE ... DROP COLUMN` |
+| 🔍 Describe Table | `DESC` / `DESCRIBE` |
+
+---
+
+# 🚀 **25. One-Line Revision**
+
+> 💡 **Row represents a complete record horizontally, while Column represents a particular field vertically in a database table.**
+
+---
+
+
