@@ -22,10 +22,6 @@ Is chapter me hum Database aur Database Management System ke basic concepts ko s
 - 🔹 Database Table
 - 🔹 Row and Column
 - 🔹 DBMS vs RDBMS
-- 🔹 Database ke Advantages
-- 🔹 Real-Life Examples
-- 🔹 Quick Revision
-- 🔹 Important Exam Questions
 
 ---
 
