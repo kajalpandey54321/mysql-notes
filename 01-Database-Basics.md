@@ -545,3 +545,112 @@ DBMS ek software system hai jo database ko create, store, manage, update aur ret
 **DATABASE = Data Store 🗄️**
 
 **DBMS = Database Manage 💻**
+
+
+# 💻 **RDBMS — RELATIONAL DATABASE MANAGEMENT SYSTEM**
+
+---
+
+## 📖 **Full Form**
+
+**RDBMS = Relational Database Management System**
+
+---
+
+## 📚 **Definition**
+
+An **RDBMS (Relational Database Management System)** is a software system used to store and manage data in the form of related tables.
+
+---
+
+## 🧠 **Simple Hinglish**
+
+RDBMS ek **database management system** hai jo data ko **tables (rows aur columns)** ke form mein store aur manage karta hai.
+
+👉 Simple words mein:
+
+**RDBMS = Tables + Data + Relationships**
+
+---
+
+## 🎯 **Real-Life Example**
+
+| 🆔 Roll No. | 👤 Name | 💻 Course | 📊 Marks |
+|---|---|---|---:|
+| 101 | Kajal | CSE | 85 |
+| 102 | Rahul | CSE | 78 |
+| 103 | Priya | IT | 90 |
+
+> 💡 **Note:** RDBMS mein data tables ke form mein organized hota hai.
+
+---
+
+## ⚙️ **Features of RDBMS**
+
+### 1️⃣ **Table-Based Storage**
+
+Data ko tables ke form mein store kiya jata hai.
+
+### 2️⃣ **Rows and Columns**
+
+Table mein data rows aur columns ke form mein organized hota hai.
+
+### 3️⃣ **Relationships**
+
+Different tables ke beech relationship establish kiya ja sakta hai.
+
+---
+
+## ⭐ **Advantages of RDBMS**
+
+- 📋 Organized Data
+- 🔍 Easy Data Access
+- 🔗 Relationship Between Tables
+- 🔐 Data Security
+- 🛡️ Data Integrity
+
+---
+
+## ⚠️ **Disadvantages of RDBMS**
+
+- 🧠 Database design complex ho sakta hai.
+- 💾 Large databases ke liye more storage required ho sakti hai.
+- ⚙️ Technical knowledge ki zarurat ho sakti hai.
+
+---
+
+## ✍️ **Exam Point of View**
+
+**Definition:**  
+An RDBMS is a database management system that stores data in the form of related tables consisting of rows and columns.
+
+**Hinglish:**  
+RDBMS ek database management system hai jo data ko related tables mein rows aur columns ke form mein store aur manage karta hai.
+
+---
+
+## 📝 **Important Exam Questions**
+
+**Q1. What is RDBMS?**  
+👉 RDBMS is a database management system that stores data in related tables.
+
+**Q2. Write the full form of RDBMS.**  
+👉 **Relational Database Management System**
+
+**Q3. Give examples of RDBMS.**  
+👉 MySQL, Oracle, PostgreSQL and Microsoft SQL Server.
+
+---
+
+## 🚀 **Quick Revision**
+
+> 🗃️ **RDBMS**
+>
+> 📋 Table → Data Storage  
+> ➡️ Row → Record  
+> ⬇️ Column → Field  
+> 🔑 Primary Key → Unique Identification  
+> 🔗 Foreign Key → Relationship  
+> 💻 SQL → Database Management
+
+
