@@ -654,3 +654,501 @@ RDBMS ek database management system hai jo data ko related tables mein rows aur 
 > 💻 SQL → Database Management
 
 
+# 🗃️ **DATABASE TABLE**
+
+---
+
+## 📌 **1. Database Table Kya Hai?**
+
+**Database Table** database ke andar data ko **rows aur columns** ke form mein store karne ka structured way hai.
+
+### 🧠 **Simple Hinglish**
+
+Table ko hum ek **register ya Excel sheet** ki tarah samajh sakte hain.
+
+- **Column** → kis type ki information hai
+- **Row** → ek complete record
+- **Cell** → ek single value
+
+### 📌 **Example**
+
+Agar hume students ka data store karna hai, to hum `Student` naam ki table bana sakte hain.
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+| 102 | Rahul | 19 | CSE |
+| 103 | Priya | 18 | IT |
+
+Yahan:
+
+- `Roll_No`, `Name`, `Age`, `Course` → **Columns**
+- Har student ki complete information → **Row**
+- `Kajal`, `18`, `CSE` → **Values**
+
+---
+
+## 🎯 **2. Database Table Ki Need Kyu Hoti Hai?**
+
+Database Table ka use data ko:
+
+1. 📦 **Store** karne ke liye
+2. 🗂️ **Organize** karne ke liye
+3. 🔍 **Search** karne ke liye
+4. ✏️ **Update** karne ke liye
+5. ❌ **Delete** karne ke liye
+6. 📊 **Manage** karne ke liye
+
+---
+
+# 🧩 **3. Table Ke Main Parts**
+
+Database Table ke important parts:
+
+### 🔹 **1. Row**
+
+Row ko **Record** bhi kaha jata hai.
+
+Ek row mein kisi ek person/object ki complete information hoti hai.
+
+Example:
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+
+Ye ek **complete student record** hai.
+
+---
+
+### 🔹 **2. Column**
+
+Column ko **Field** bhi kaha jata hai.
+
+Column kisi particular type ki information ko represent karta hai.
+
+Example:
+
+```text
+Roll_No
+Name
+Age
+Course
+```
+
+Ye sab **columns** hain.
+
+---
+
+### 🔹 **3. Cell**
+
+Row aur Column ke intersection ko **Cell** kaha jata hai.
+
+Example:
+
+| Roll_No | Name | Age |
+|---:|---|---:|
+| 101 | Kajal | 18 |
+
+Yahan `Kajal` ek **cell value** hai.
+
+---
+
+# 📊 **4. Table Structure**
+
+```text
+                STUDENT TABLE
+        ┌─────────┬─────────┬─────┬────────┐
+        │ Roll_No │  Name   │ Age │ Course │
+        ├─────────┼─────────┼─────┼────────┤
+        │   101   │  Kajal  │ 18  │  CSE   │
+        │   102   │  Rahul  │ 19  │  CSE   │
+        │   103   │  Priya  │ 18  │   IT   │
+        └─────────┴─────────┴─────┴────────┘
+             ↑         ↑
+           Column    Column
+
+        ←──────── Row ────────→
+```
+
+> 💡 **Remember:**  
+> **Row = Record**  
+> **Column = Field**
+
+---
+
+# 🛠️ **5. Database Table Create Karna**
+
+MySQL mein table create karne ke liye **CREATE TABLE** command use hoti hai.
+
+### 📌 **Syntax**
+
+```sql
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+```
+
+---
+
+### 📌 **Example**
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT,
+    Name VARCHAR(50),
+    Age INT,
+    Course VARCHAR(30)
+);
+```
+
+### 🧠 **Explanation**
+
+| Part | Meaning |
+|---|---|
+| `CREATE TABLE` | New table create karta hai |
+| `Student` | Table ka naam |
+| `Roll_No` | Column name |
+| `INT` | Data Type |
+| `Name` | Column name |
+| `VARCHAR(50)` | Text data type |
+| `;` | Query ka end |
+
+---
+
+# ➕ **6. Table Mein Data Insert Karna**
+
+Table create hone ke baad usmein data insert karne ke liye **INSERT INTO** command use hoti hai.
+
+### 📌 **Syntax**
+
+```sql
+INSERT INTO table_name
+(column1, column2, column3)
+VALUES
+(value1, value2, value3);
+```
+
+### 📌 **Example**
+
+```sql
+INSERT INTO Student
+(Roll_No, Name, Age, Course)
+VALUES
+(101, 'Kajal', 18, 'CSE');
+```
+
+---
+
+### 📌 **Multiple Records Insert Karna**
+
+```sql
+INSERT INTO Student
+(Roll_No, Name, Age, Course)
+VALUES
+(102, 'Rahul', 19, 'CSE'),
+(103, 'Priya', 18, 'IT');
+```
+
+---
+
+# 🔍 **7. Table Ka Data Dekhna**
+
+Table ka data dekhne ke liye **SELECT** command use hoti hai.
+
+### 📌 **Query**
+
+```sql
+SELECT * FROM Student;
+```
+
+### 📊 **Expected Output**
+
+| Roll_No | Name | Age | Course |
+|---:|---|---:|---|
+| 101 | Kajal | 18 | CSE |
+| 102 | Rahul | 19 | CSE |
+| 103 | Priya | 18 | IT |
+
+> 💡 `*` ka meaning hai **all columns**.
+
+---
+
+# ✏️ **8. Table Ka Data Update Karna**
+
+Existing record ko change karne ke liye **UPDATE** command use hoti hai.
+
+### 📌 **Example**
+
+Kajal ki age 18 se 19 karni hai:
+
+```sql
+UPDATE Student
+SET Age = 19
+WHERE Roll_No = 101;
+```
+
+> ⚠️ **Important:** `WHERE` condition lagana important hai, warna multiple records update ho sakte hain.
+
+---
+
+# ❌ **9. Table Se Data Delete Karna**
+
+Record delete karne ke liye **DELETE** command use hoti hai.
+
+### 📌 **Example**
+
+Roll number 103 ka record delete karna:
+
+```sql
+DELETE FROM Student
+WHERE Roll_No = 103;
+```
+
+---
+
+# 🗑️ **10. Complete Table Delete Karna**
+
+Agar poori table ko delete karna ho to **DROP TABLE** command use hoti hai.
+
+### 📌 **Query**
+
+```sql
+DROP TABLE Student;
+```
+
+> ⚠️ **Note:** `DROP TABLE` table aur uske andar ka data dono remove kar deta hai.
+
+---
+
+# 🔑 **11. Primary Key**
+
+Table mein kisi record ko **uniquely identify** karne ke liye Primary Key use hoti hai.
+
+Example:
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Course VARCHAR(30)
+);
+```
+
+Yahan `Roll_No` **Primary Key** hai.
+
+### ⭐ Primary Key Ki Properties
+
+- Unique hoti hai
+- Duplicate value nahi honi chahiye
+- `NULL` value nahi hoti
+- Har record ko uniquely identify karti hai
+
+---
+
+# 🔗 **12. Foreign Key**
+
+Foreign Key ka use **do tables ke beech relationship establish** karne ke liye hota hai.
+
+### 📌 **Example**
+
+```sql
+CREATE TABLE Course (
+    Course_ID INT PRIMARY KEY,
+    Course_Name VARCHAR(50)
+);
+```
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Course_ID INT,
+    FOREIGN KEY (Course_ID) REFERENCES Course(Course_ID)
+);
+```
+
+Yahan `Student` table ka `Course_ID`, `Course` table ke `Course_ID` se connected hai.
+
+---
+
+# ⚙️ **13. Common Operations on Table**
+
+Database Table par mainly ye operations perform kiye ja sakte hain:
+
+| Operation | SQL Command | Purpose |
+|---|---|---|
+| 🆕 Create | `CREATE TABLE` | Table banana |
+| ➕ Insert | `INSERT INTO` | Data add karna |
+| 🔍 Read | `SELECT` | Data dekhna |
+| ✏️ Update | `UPDATE` | Data change karna |
+| ❌ Delete | `DELETE` | Record delete karna |
+| 🗑️ Drop | `DROP TABLE` | Complete table delete karna |
+
+### 🧠 **Easy Trick**
+
+```text
+CREATE  → Table banao
+INSERT  → Data dalo
+SELECT  → Data dekho
+UPDATE  → Data badlo
+DELETE  → Data hatao
+DROP    → Table hatao
+```
+
+---
+
+# 📋 **14. Table Ki Important Characteristics**
+
+Database Table ki main characteristics:
+
+1. 📌 Table ka ek unique name hota hai.
+2. 📌 Table rows aur columns se milkar banti hai.
+3. 📌 Har column ka ek name hota hai.
+4. 📌 Har column ka ek data type hota hai.
+5. 📌 Rows records ko represent karti hain.
+6. 📌 Primary Key records ko uniquely identify kar sakti hai.
+7. 📌 Tables ke beech relationships create kiye ja sakte hain.
+
+---
+
+# 🆚 **15. Database vs Database Table**
+
+| Feature | Database | Database Table |
+|---|---|---|
+| Meaning | Data ka organized collection | Database ke andar data store karne ki structure |
+| Contains | Tables, views etc. | Rows & Columns |
+| Example | `CollegeDB` | `Student` |
+| Purpose | Complete data management | Specific data store karna |
+
+### 🧠 **Easy Example**
+
+```text
+CollegeDB  ← Database
+
+     ↓
+
+Student    ← Table
+Teacher    ← Table
+Course     ← Table
+```
+
+---
+
+# 🎯 **16. Real-Life Example**
+
+College ke database mein multiple tables ho sakti hain:
+
+```text
+                 COLLEGE DATABASE
+                        │
+        ┌───────────────┼───────────────┐
+        ↓               ↓               ↓
+     Student          Teacher          Course
+      Table             Table           Table
+```
+
+### 📌 Student Table
+
+| Roll_No | Name | Course |
+|---:|---|---|
+| 101 | Kajal | CSE |
+| 102 | Rahul | IT |
+
+### 📌 Course Table
+
+| Course_ID | Course_Name |
+|---:|---|
+| 1 | CSE |
+| 2 | IT |
+
+Is tarah database ke andar alag-alag tables mein related information store ki ja sakti hai.
+
+---
+
+# ✍️ **17. Exam Point of View**
+
+### ❓ Q1. What is a Database Table?
+
+**Answer:**
+
+A Database Table is a structured collection of data arranged in the form of rows and columns. It is used to store and organize data in a database.
+
+---
+
+### ❓ Q2. What is a Row?
+
+**Answer:**
+
+A row is a single record in a database table. It contains complete information about one entity or object.
+
+---
+
+### ❓ Q3. What is a Column?
+
+**Answer:**
+
+A column is a field in a database table that represents a particular type of information.
+
+---
+
+### ❓ Q4. How do you create a table in MySQL?
+
+**Answer:**
+
+A table is created in MySQL using the `CREATE TABLE` command.
+
+Example:
+
+```sql
+CREATE TABLE Student (
+    Roll_No INT,
+    Name VARCHAR(50),
+    Age INT
+);
+```
+
+---
+
+### ❓ Q5. What is a Primary Key?
+
+**Answer:**
+
+A Primary Key is a column or set of columns that uniquely identifies each record in a table. It does not allow duplicate or NULL values.
+
+---
+
+### ❓ Q6. What is a Foreign Key?
+
+**Answer:**
+
+A Foreign Key is a column that establishes a relationship between two tables by referring to the Primary Key of another table.
+
+---
+
+
+
+# 🧠 **19. Quick Revision**
+
+```text
+🗃️ Database Table
+        ↓
+Rows + Columns
+        ↓
+Row = Record
+Column = Field
+Cell = Single Value
+        ↓
+CREATE TABLE → Table Create
+INSERT → Data Add
+SELECT → Data Read
+UPDATE → Data Change
+DELETE → Record Delete
+DROP TABLE → Table Delete
+        ↓
+Primary Key → Unique Identification
+
+
