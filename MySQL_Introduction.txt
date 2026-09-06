@@ -1,1 +1,1049 @@
+╔══════════════════════════════════════════════════════════╗
+║                 📚 MYSQL COMPLETE NOTES 📚               ║
+║                    💻 Hinglish Notes                     ║
+║                   🎓 Diploma CSE                         ║
+╚══════════════════════════════════════════════════════════╝
 
+
+🌟 CHAPTER 1 — DATABASE BASICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 1. DATA KYA HOTA HAI?
+
+Data ka matlab hota hai raw facts ya information.
+
+Simple Hinglish:
+Data kisi person, object ya kisi activity se related information
+ho sakti hai.
+
+📌 Examples:
+• Name → Kajal
+• Age → 20
+• Course → CSE
+• Marks → 85
+• Roll Number → 101
+
+👉 Ye sab individual information ko Data kaha ja sakta hai.
+
+
+🔹 2. DATABASE KYA HOTA HAI?
+
+Database ek organized collection of data hota hai jisme data ko
+properly store, manage aur retrieve kiya ja sakta hai.
+
+🧠 Simple Hinglish:
+Database ek digital store room ki tarah hota hai jahan hum
+apna data systematically rakhte hain.
+
+📌 Example:
+
+Student Database
+
+ID     Name       Course     Marks
+1      Kajal      CSE        85
+2      Rahul      CSE        78
+3      Priya      IT         90
+
+
+🔹 3. DBMS KYA HOTA HAI?
+
+DBMS ka full form hai:
+
+Database Management System
+
+DBMS ek software/system hota hai jo database ko create,
+store, update, delete aur manage karne me help karta hai.
+
+🧠 Simple Hinglish:
+DBMS database ke data ko manage karne wala software hai.
+
+📌 Examples:
+• MySQL
+• Oracle
+• Microsoft SQL Server
+• PostgreSQL
+
+
+🔹 4. RDBMS KYA HOTA HAI?
+
+RDBMS ka full form hai:
+
+Relational Database Management System
+
+RDBMS me data tables ke form me store hota hai.
+
+Table me:
+• Rows hoti hain
+• Columns hote hain
+
+📌 Example:
+
+Student Table
+
+ID | Name  | Course
+1  | Kajal | CSE
+2  | Rahul | CSE
+
+⭐ MySQL ek RDBMS hai.
+
+
+🔹 5. DBMS vs RDBMS
+
+DBMS:
+👉 Data ko manage karta hai.
+👉 Relationship zaroori nahi hota.
+
+RDBMS:
+👉 Data tables ke form me store karta hai.
+👉 Tables ke beech relationship create kiya ja sakta hai.
+👉 Primary Key aur Foreign Key ka use hota hai.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🐬 CHAPTER 2 — MYSQL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 1. MYSQL KYA HAI?
+
+MySQL ek popular open-source RDBMS hai jo database me data ko
+store, manage aur retrieve karne ke liye use hota hai.
+
+MySQL me database ke saath kaam karne ke liye SQL language
+ka use kiya jata hai.
+
+🧠 Simple Hinglish:
+MySQL ek software hai jiske through hum database create karke
+usme data store aur manage kar sakte hain.
+
+
+🔹 2. MYSQL KI FEATURES
+
+⭐ 1. Open Source
+MySQL open-source database system hai.
+
+⭐ 2. Easy to Use
+Beginners ke liye MySQL relatively easy hai.
+
+⭐ 3. Fast
+MySQL database operations ko efficiently perform karta hai.
+
+⭐ 4. Secure
+MySQL data ko secure karne ke liye security features provide karta hai.
+
+⭐ 5. Reliable
+MySQL reliable database management system hai.
+
+⭐ 6. Cross-Platform
+MySQL different operating systems par run kar sakta hai.
+
+⭐ 7. SQL Support
+MySQL SQL commands ko support karta hai.
+
+
+🔹 3. MYSQL KA USE KAHAN HOTA HAI?
+
+MySQL ka use:
+
+🌐 Websites
+💻 Web Applications
+🛒 E-commerce
+🏫 College Management Systems
+🏥 Hospital Management Systems
+🏦 Banking Applications
+📱 Applications
+📊 Data Management
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 3 — SQL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 1. SQL KYA HAI?
+
+SQL ka full form hai:
+
+Structured Query Language
+
+SQL ek language hai jiska use database ke saath interact
+karne ke liye kiya jata hai.
+
+🧠 Simple Hinglish:
+SQL ke through hum database ko instructions dete hain.
+
+Jaise:
+👉 Database banao
+👉 Table banao
+👉 Data add karo
+👉 Data dekho
+👉 Data update karo
+👉 Data delete karo
+
+
+🔹 2. SQL COMMANDS KE TYPES
+
+SQL commands ko mainly 5 categories me divide kiya jata hai:
+
+1️⃣ DDL
+2️⃣ DML
+3️⃣ DQL
+4️⃣ DCL
+5️⃣ TCL
+
+
+🔸 DDL — Data Definition Language
+
+DDL ka use database/table ki structure ko create aur modify
+karne ke liye hota hai.
+
+Important commands:
+
+CREATE
+ALTER
+DROP
+TRUNCATE
+
+
+🔸 DML — Data Manipulation Language
+
+DML ka use table ke data ko insert, update aur delete karne
+ke liye hota hai.
+
+Commands:
+
+INSERT
+UPDATE
+DELETE
+
+
+🔸 DQL — Data Query Language
+
+DQL ka use database se data retrieve/read karne ke liye hota hai.
+
+Command:
+
+SELECT
+
+
+🔸 DCL — Data Control Language
+
+DCL ka use database ke permissions/access ko control karne
+ke liye hota hai.
+
+Commands:
+
+GRANT
+REVOKE
+
+
+🔸 TCL — Transaction Control Language
+
+TCL ka use database transactions ko manage karne ke liye hota hai.
+
+Commands:
+
+COMMIT
+ROLLBACK
+SAVEPOINT
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 4 — DATABASE COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 1. DATABASE CREATE KARNA
+
+Syntax:
+
+CREATE DATABASE database_name;
+
+Example:
+
+CREATE DATABASE college;
+
+
+🔹 2. DATABASE LIST DEKHNA
+
+SHOW DATABASES;
+
+Ye command available databases ko show karti hai.
+
+
+🔹 3. DATABASE SELECT KARNA
+
+USE college;
+
+Is command se hum college database ko select karte hain.
+
+
+🔹 4. DATABASE DELETE KARNA
+
+DROP DATABASE college;
+
+⚠️ Is command se database permanently delete ho sakta hai.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 5 — TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 1. TABLE KYA HOTA HAI?
+
+Table database ke andar data ko rows aur columns ke form me
+store karti hai.
+
+📌 Example:
+
+Student Table
+
+ID | Name  | Age | Course
+1  | Kajal | 20  | CSE
+2  | Rahul | 21  | CSE
+
+
+🔹 2. TABLE CREATE KARNA
+
+Syntax:
+
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+
+
+Example:
+
+CREATE TABLE student (
+    id INT,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50)
+);
+
+
+🔹 3. TABLES DEKHNA
+
+SHOW TABLES;
+
+Ye selected database ki tables ko show karta hai.
+
+
+🔹 4. TABLE KI STRUCTURE DEKHNA
+
+DESC student;
+
+Ya:
+
+DESCRIBE student;
+
+
+🔹 5. TABLE DELETE KARNA
+
+DROP TABLE student;
+
+⚠️ Isse table aur uska data delete ho jata hai.
+
+
+🔹 6. TABLE ME COLUMN ADD KARNA
+
+ALTER TABLE student
+ADD email VARCHAR(100);
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 6 — DATA TYPES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Data Type batata hai ki kisi column me kis type ka data store
+kiya ja sakta hai.
+
+
+🔹 1. INT
+
+Integer numbers store karne ke liye.
+
+Example:
+
+age INT
+
+
+🔹 2. VARCHAR
+
+Text/string store karne ke liye.
+
+Example:
+
+name VARCHAR(50)
+
+
+🔹 3. CHAR
+
+Fixed-length character/string ke liye use hota hai.
+
+
+🔹 4. FLOAT
+
+Decimal numbers ke liye.
+
+Example:
+
+percentage FLOAT
+
+
+🔹 5. DECIMAL
+
+Accurate decimal values store karne ke liye.
+
+Example:
+
+salary DECIMAL(10,2)
+
+
+🔹 6. DATE
+
+Date store karne ke liye.
+
+Example:
+
+dob DATE
+
+Example value:
+
+2005-08-15
+
+
+🔹 7. BOOLEAN
+
+TRUE ya FALSE type ki value represent karne ke liye.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 7 — CONSTRAINTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 CONSTRAINT KYA HOTA HAI?
+
+Constraints table ke columns par lagaye gaye rules hote hain.
+
+Ye database me data ko accurate aur valid rakhne me help karte hain.
+
+
+⭐ IMPORTANT CONSTRAINTS:
+
+1️⃣ PRIMARY KEY
+2️⃣ FOREIGN KEY
+3️⃣ NOT NULL
+4️⃣ UNIQUE
+5️⃣ DEFAULT
+6️⃣ CHECK
+
+
+🔑 1. PRIMARY KEY
+
+Primary Key ka use table ke har record ko uniquely identify
+karne ke liye hota hai.
+
+Example:
+
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+🧠 Simple Hinglish:
+ID ko Primary Key banane par har student ki ID unique hogi.
+
+⭐ Important Points:
+• Duplicate value allowed nahi hoti.
+• NULL value allowed nahi hoti.
+• Record ko uniquely identify karti hai.
+
+
+🔗 2. FOREIGN KEY
+
+Foreign Key ka use do tables ke beech relationship create
+karne ke liye hota hai.
+
+Example:
+
+FOREIGN KEY (course_id)
+REFERENCES course(id);
+
+
+🔸 3. NOT NULL
+
+NOT NULL ka matlab hai ki column me NULL value nahi ho sakti.
+
+Example:
+
+name VARCHAR(50) NOT NULL;
+
+
+🔸 4. UNIQUE
+
+UNIQUE ka use duplicate values ko prevent karne ke liye hota hai.
+
+Example:
+
+email VARCHAR(100) UNIQUE;
+
+
+🔸 5. DEFAULT
+
+Agar user koi value provide nahi karta, to DEFAULT value
+automatically use ho sakti hai.
+
+Example:
+
+city VARCHAR(50) DEFAULT 'Jaunpur';
+
+
+🔸 6. CHECK
+
+CHECK ka use kisi condition ko enforce karne ke liye hota hai.
+
+Example:
+
+age INT CHECK (age >= 18);
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 8 — CRUD OPERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+CRUD ka full form:
+
+🟢 C → CREATE
+🔵 R → READ
+🟡 U → UPDATE
+🔴 D → DELETE
+
+
+🔹 1. CREATE / INSERT
+
+Database table me new data add karne ke liye INSERT command
+ka use hota hai.
+
+Example:
+
+INSERT INTO student
+VALUES (1, 'Kajal', 20, 'CSE');
+
+
+🔹 2. READ / SELECT
+
+Database se data read/retrieve karne ke liye SELECT command
+ka use hota hai.
+
+Example:
+
+SELECT * FROM student;
+
+
+🔹 3. UPDATE
+
+Existing data ko change/modify karne ke liye UPDATE command
+ka use hota hai.
+
+Example:
+
+UPDATE student
+SET age = 21
+WHERE id = 1;
+
+
+🔹 4. DELETE
+
+Table se record delete karne ke liye DELETE command ka use hota hai.
+
+Example:
+
+DELETE FROM student
+WHERE id = 1;
+
+⚠️ UPDATE aur DELETE ke saath WHERE condition carefully use karo.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 9 — SELECT & FILTERING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 SELECT ALL DATA
+
+SELECT * FROM student;
+
+* ka matlab hai all columns.
+
+
+🔹 SPECIFIC COLUMNS
+
+SELECT name, course
+FROM student;
+
+
+🔹 WHERE
+
+WHERE ka use specific condition ke according data filter karne
+ke liye hota hai.
+
+Example:
+
+SELECT * FROM student
+WHERE age = 20;
+
+
+🔹 AND
+
+AND ka use multiple conditions ko combine karne ke liye hota hai.
+
+Example:
+
+SELECT * FROM student
+WHERE age = 20 AND course = 'CSE';
+
+
+🔹 OR
+
+OR me agar koi bhi ek condition true ho to record select ho sakta hai.
+
+Example:
+
+SELECT * FROM student
+WHERE course = 'CSE' OR course = 'IT';
+
+
+🔹 DISTINCT
+
+Duplicate values ko remove karke unique values show karta hai.
+
+Example:
+
+SELECT DISTINCT course
+FROM student;
+
+
+🔹 ORDER BY
+
+Data ko ascending ya descending order me sort karne ke liye.
+
+Ascending:
+
+SELECT * FROM student
+ORDER BY age ASC;
+
+Descending:
+
+SELECT * FROM student
+ORDER BY age DESC;
+
+
+🔹 LIKE
+
+LIKE ka use pattern matching ke liye hota hai.
+
+Example:
+
+SELECT * FROM student
+WHERE name LIKE 'K%';
+
+👉 K% ka matlab name K se start hona chahiye.
+
+
+🔹 BETWEEN
+
+Kisi range ke andar values find karne ke liye.
+
+Example:
+
+SELECT * FROM student
+WHERE age BETWEEN 18 AND 25;
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 10 — SQL FUNCTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+SQL Functions ka use data par calculations/operations perform
+karne ke liye hota hai.
+
+
+🔹 COUNT()
+
+Records ki total number count karta hai.
+
+SELECT COUNT(*)
+FROM student;
+
+
+🔹 SUM()
+
+Values ka total calculate karta hai.
+
+SELECT SUM(marks)
+FROM student;
+
+
+🔹 AVG()
+
+Values ka average calculate karta hai.
+
+SELECT AVG(marks)
+FROM student;
+
+
+🔹 MAX()
+
+Sabse maximum value find karta hai.
+
+SELECT MAX(marks)
+FROM student;
+
+
+🔹 MIN()
+
+Sabse minimum value find karta hai.
+
+SELECT MIN(marks)
+FROM student;
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 11 — GROUP BY & HAVING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 GROUP BY
+
+Same values wale records ko groups me arrange karta hai.
+
+Example:
+
+SELECT course, COUNT(*)
+FROM student
+GROUP BY course;
+
+
+🧠 Simple Hinglish:
+Agar CSE ke 10 students aur IT ke 5 students hain,
+to GROUP BY course ke according dono ko alag groups me
+arrange kar sakta hai.
+
+
+🔹 HAVING
+
+HAVING ka use grouped data par condition lagane ke liye hota hai.
+
+Example:
+
+SELECT course, COUNT(*)
+FROM student
+GROUP BY course
+HAVING COUNT(*) > 2;
+
+
+⭐ Difference:
+
+WHERE → Individual records ko filter karta hai.
+
+HAVING → Groups ko filter karta hai.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 12 — JOINS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔹 JOIN KYA HOTA HAI?
+
+JOIN ka use two ya more tables ke related data ko combine karne
+ke liye hota hai.
+
+Example:
+
+STUDENT TABLE
+
+id | name  | course_id
+1  | Kajal | 101
+2  | Rahul | 102
+
+
+COURSE TABLE
+
+id  | course_name
+101 | CSE
+102 | IT
+
+
+Dono tables ko course_id/id ke through connect kiya ja sakta hai.
+
+
+⭐ TYPES OF JOINS:
+
+1️⃣ INNER JOIN
+2️⃣ LEFT JOIN
+3️⃣ RIGHT JOIN
+4️⃣ CROSS JOIN
+
+
+🔹 INNER JOIN
+
+Sirf matching records return karta hai.
+
+Example:
+
+SELECT student.name, course.course_name
+FROM student
+INNER JOIN course
+ON student.course_id = course.id;
+
+
+🔹 LEFT JOIN
+
+Left table ke saare records aur right table ke matching records
+return karta hai.
+
+
+🔹 RIGHT JOIN
+
+Right table ke saare records aur left table ke matching records
+return karta hai.
+
+
+🔹 CROSS JOIN
+
+Dono tables ke records ke combinations return karta hai.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 13 — KEYS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🔑 PRIMARY KEY
+
+Har record ko uniquely identify karti hai.
+
+
+🔑 FOREIGN KEY
+
+Do tables ke beech relationship create karti hai.
+
+
+🔑 CANDIDATE KEY
+
+Aisi key jo Primary Key banne ke liye eligible ho sakti hai.
+
+
+🔑 COMPOSITE KEY
+
+Do ya more columns ko combine karke banayi gayi key.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 14 — RELATIONSHIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Tables ke beech different types ke relationships ho sakte hain.
+
+
+1️⃣ ONE-TO-ONE
+
+Ek record ka relation ek hi record se hota hai.
+
+Example:
+
+Person → Passport
+
+
+2️⃣ ONE-TO-MANY
+
+Ek record ke saath multiple records related ho sakte hain.
+
+Example:
+
+Teacher → Many Students
+
+
+3️⃣ MANY-TO-MANY
+
+Multiple records multiple records se related ho sakte hain.
+
+Example:
+
+Students ↔ Courses
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📖 CHAPTER 15 — IMPORTANT SQL COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🐬 DATABASE:
+
+CREATE DATABASE college;
+
+SHOW DATABASES;
+
+USE college;
+
+DROP DATABASE college;
+
+
+📋 TABLE:
+
+CREATE TABLE student (
+    id INT,
+    name VARCHAR(50)
+);
+
+SHOW TABLES;
+
+DESC student;
+
+DROP TABLE student;
+
+
+📝 INSERT:
+
+INSERT INTO student
+VALUES (1, 'Kajal');
+
+
+👀 SELECT:
+
+SELECT * FROM student;
+
+
+✏️ UPDATE:
+
+UPDATE student
+SET name = 'Rahul'
+WHERE id = 1;
+
+
+🗑️ DELETE:
+
+DELETE FROM student
+WHERE id = 1;
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 QUICK REVISION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+🐬 MySQL
+→ Ek popular RDBMS hai.
+
+🗄️ Database
+→ Organized collection of data.
+
+💻 DBMS
+→ Database ko manage karne wala system/software.
+
+📊 RDBMS
+→ Tables aur relationships ke through data manage karta hai.
+
+⌨️ SQL
+→ Database ke saath interact karne ki language.
+
+➕ INSERT
+→ Data add karta hai.
+
+👀 SELECT
+→ Data read karta hai.
+
+✏️ UPDATE
+→ Data modify karta hai.
+
+🗑️ DELETE
+→ Data delete karta hai.
+
+🔑 PRIMARY KEY
+→ Record ko uniquely identify karti hai.
+
+🔗 FOREIGN KEY
+→ Tables ke beech relationship banati hai.
+
+🔍 WHERE
+→ Records filter karta hai.
+
+↕️ ORDER BY
+→ Data sort karta hai.
+
+📦 GROUP BY
+→ Records ko groups me arrange karta hai.
+
+🔎 HAVING
+→ Groups ko filter karta hai.
+
+🔗 JOIN
+→ Tables ka related data combine karta hai.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 IMPORTANT EXAM QUESTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+1. MySQL kya hai? Iski features explain karo.
+
+2. Database kya hota hai?
+
+3. DBMS aur RDBMS kya hai?
+
+4. DBMS aur RDBMS me difference batao.
+
+5. SQL kya hai?
+
+6. SQL commands ke different types explain karo.
+
+7. DDL, DML, DQL, DCL aur TCL kya hain?
+
+8. Primary Key kya hai?
+
+9. Foreign Key kya hai?
+
+10. Constraints kya hote hain? Different constraints explain karo.
+
+11. CRUD operations kya hain?
+
+12. INSERT, SELECT, UPDATE aur DELETE commands explain karo.
+
+13. WHERE aur HAVING me difference batao.
+
+14. JOIN kya hai? Iske types explain karo.
+
+15. MySQL ke important data types explain karo.
+
+16. GROUP BY kya hai?
+
+17. ORDER BY kya hai?
+
+18. LIKE operator kya hai?
+
+19. Database aur table kaise create karte hain?
+
+20. ALTER TABLE ka use kya hai?
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💙 KEEP LEARNING
+💻 KEEP CODING
+🚀 KEEP PRACTICING
+
+        📚 MYSQL NOTES | DIPLOMA CSE 📚
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
