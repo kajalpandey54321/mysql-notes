@@ -1649,27 +1649,6 @@ ADD Email VARCHAR(100);
 
 ---
 
-# ⭐ **23. Important Questions**
-
-### 📌 **Short Questions**
-
-1. What is a Row?
-2. What is a Column?
-3. What is a Record?
-4. What is a Field?
-5. What is the difference between Row and Column?
-6. How can you add a new row in MySQL?
-7. How can you add a new column in MySQL?
-8. Which command is used to modify a column?
-9. Which command is used to delete a column?
-
-### 📌 **Long Questions**
-
-1. Explain Row and Column with a suitable example.
-2. Differentiate between Row and Column.
-3. Explain different operations performed on Rows and Columns.
-4. Explain how to add, modify and delete a column in MySQL.
-
 ---
 
 # 🔄 **24. Quick Revision**
